@@ -1,4 +1,4 @@
-package self.project.polydator.controllers
+package self.project.polydator.categorization
 
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
@@ -8,10 +8,12 @@ import self.project.polydator.Triangle
 
 @RestController
 @RequestMapping("/v1/categorize")
-class CategorizationController {
+class CategorizationController(
+        private val triangleCategorizationInteractor: CategorizeTriangleInteractor
+) {
 
     @PostMapping("/triangle")
     fun categorizeTriangle(@RequestBody triangle: Triangle): String {
-        return "ok"
+        return triangleCategorizationInteractor.categorize()
     }
 }
