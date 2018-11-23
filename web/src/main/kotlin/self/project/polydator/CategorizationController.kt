@@ -5,10 +5,11 @@ import org.springframework.web.bind.annotation.RequestMethod.POST
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
+@RequestMapping("/v1/categorize")
 class CategorizationController {
 
-    @RequestMapping(value = ["/v1/categorize/triangle"], method = [POST])
-    fun categorizeTriangle(): String {
+    @RequestMapping("/triangle", method = [POST])
+    fun categorizeTriangle(coordinates: Triple<Int, Int, Int>): String {
         return "ok"
     }
 }
