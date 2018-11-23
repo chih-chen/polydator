@@ -1,11 +1,21 @@
 package self.project.polydator.categorization
 
 import org.springframework.stereotype.Component
+import self.project.polydator.Triangle
+import self.project.polydator.categorization.exceptions.IllegalShapeException
 
 @Component
-class CategorizeTriangleInteractor {
+class CategorizeTriangleInteractor(
+
+) {
 
     fun categorize() : String {
-        return "ok"
+
+        val isNotValidTriangle = !Triangle.validate()
+
+        if (isNotValidTriangle)
+            throw IllegalShapeException()
+
+
     }
 }
