@@ -5,13 +5,11 @@ import self.project.polydator.Triangle
 import self.project.polydator.categorization.exceptions.IllegalShapeException
 
 @Component
-class CategorizeTriangleInteractor(
+class CategorizeTriangleInteractor {
 
-) {
+    fun categorize(triangle: Triangle): String {
 
-    fun categorize() : String {
-
-        val isNotValidTriangle = !Triangle.validate()
+        val isNotValidTriangle = !triangle.validate()
 
         if (isNotValidTriangle)
             throw IllegalShapeException()

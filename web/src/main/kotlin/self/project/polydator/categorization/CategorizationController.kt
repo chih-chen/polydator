@@ -14,6 +14,6 @@ class CategorizationController(
 
     @PostMapping("/triangle")
     fun categorizeTriangle(@RequestBody triangle: Triangle): String {
-        return triangleCategorizationInteractor.categorize()
+        return triangleCategorizationInteractor.categorize(triangle)
     }
 }
