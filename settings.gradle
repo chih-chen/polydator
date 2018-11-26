@@ -4,3 +4,5 @@ include 'entity'
 include 'usecase'
 include 'web'
 include 'app'
+include 'service'
+

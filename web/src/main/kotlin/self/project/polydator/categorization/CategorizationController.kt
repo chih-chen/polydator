@@ -4,16 +4,16 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
-import self.project.polydator.Triangle
+import self.project.polydator.Coordinate
 
 @RestController
-@RequestMapping("/v1/categorize")
+@RequestMapping("/v1/categorizePolygons")
 class CategorizationController(
-        private val triangleCategorizationInteractor: CategorizeTriangleInteractor
+        private val categorizationInteractor: CategorizationInteractor
 ) {
 
-    @PostMapping("/triangle")
-    fun categorizeTriangle(@RequestBody triangle: Triangle): String {
-        return triangleCategorizationInteractor.categorize(triangle)
+    @PostMapping("/")
+    fun categorize(@RequestBody coordinates: List<Coordinate>): String {
+        return categorizationInteractor.categorizePolygons(coordinates)
     }
 }

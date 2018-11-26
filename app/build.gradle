@@ -1,3 +1,6 @@
 dependencies {
     compile project(':web')
+    compile project(':usecase')
+    compile project(':entity')
+    compile project(':service')
 }

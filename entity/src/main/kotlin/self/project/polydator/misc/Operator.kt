@@ -1,6 +1,7 @@
-package self.project.misc
+package self.project.polydator.misc
 
 import self.project.polydator.Coordinate
+import self.project.polydator.Polygon
 import kotlin.math.hypot
 import kotlin.math.sqrt
 
