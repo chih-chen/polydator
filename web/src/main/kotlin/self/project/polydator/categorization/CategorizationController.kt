@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController
 import self.project.polydator.Coordinate
 
 @RestController
-@RequestMapping("/v1/categorizePolygons")
+@RequestMapping("/v1/categorize")
 class CategorizationController(
         private val categorizationInteractor: CategorizationInteractor
 ) {
