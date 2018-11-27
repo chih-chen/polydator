@@ -12,7 +12,7 @@ class CategorizationController(
 ) {
 
     @PostMapping
-    fun categorize(@RequestBody sides: List<Float>): Map<String, String> {
+    fun categorize(@RequestBody sides: List<Int>): Map<String, String> {
         val (shape, type) = categorizationInteractor.categorizePolygons(sides)
         return mapOf("shape" to shape, "type" to type)
     }
