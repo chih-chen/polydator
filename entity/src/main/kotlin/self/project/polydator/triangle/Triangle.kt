@@ -1,31 +1,24 @@
 package self.project.polydator.triangle
 
-import self.project.polydator.Coordinate
 import self.project.polydator.Polygon
 import self.project.polydator.PolygonType
 import self.project.polydator.Unknown
-import self.project.polydator.misc.minus
 
 data class Triangle(
-        val a: Coordinate,
-        val b: Coordinate,
-        val c: Coordinate
+        val a: Float,
+        val b: Float,
+        val c: Float
 ) : Polygon() {
 
-    private val sideOne = a - b
-    private val sideTwo = a - c
-    private val sideThree = b - c
-    private val sides = listOf(sideOne, sideTwo, sideThree)
+    private val sides = listOf(a, b, c)
 
     override fun validate(): Boolean {
-        return sideOne + sideTwo > sideThree
-                && sideOne + sideThree > sideTwo
-                && sideTwo + sideThree > sideOne
+        return a + b > c && a + c > b && b + c > a
     }
 
     override fun categorize(): PolygonType {
 
-        val isEquilateral = sideOne == sideTwo && sideTwo == sideThree
+        val isEquilateral = a == b && b == c
 
         val isIsosceles = sides.map { side ->
             sides.filterNot { it == side }.any { it == side }

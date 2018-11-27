@@ -1,8 +1,7 @@
 package self.project.polydator.categorization
 
 import org.springframework.stereotype.Component
-import self.project.polydator.Coordinate
-import self.project.polydator.categorization.exceptions.IllegalShapeException
+import self.project.polydator.categorization.exceptions.IllegalPolygonException
 import self.project.polydator.categorization.gateways.PolygonResolver
 
 @Component
@@ -10,15 +9,15 @@ class CategorizationInteractor(
         private val polygonResolver: PolygonResolver
 ) {
 
-    fun categorizePolygons(coordinates: List<Coordinate>): String {
+    fun categorizePolygons(sides: List<Float>): Pair<String, String> {
 
-        val polygon = polygonResolver.resolve(coordinates)
+        val polygon = polygonResolver.resolveShape(sides)
 
         val isNotValidPolygon = !polygon.validate()
 
         if (isNotValidPolygon)
-            throw IllegalShapeException()
+            throw IllegalPolygonException()
 
-        return polygon.categorize().typeName
+        return Pair(polygon::class.java.simpleName, polygon.categorize().typeName)
     }
 }

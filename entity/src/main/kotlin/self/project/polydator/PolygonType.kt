@@ -5,5 +5,5 @@ abstract class PolygonType {
 }
 
 object Unknown : PolygonType() {
-    override val typeName = "unknown"
+    override val typeName = "Unknown"
 }

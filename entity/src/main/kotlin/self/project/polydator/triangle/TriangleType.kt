@@ -5,13 +5,13 @@ import self.project.polydator.PolygonType
 sealed class TriangleType : PolygonType()
 
 object Equilateral : TriangleType() {
-    override val typeName = "equilateral"
+    override val typeName = "Equilateral"
 }
 
 object Isosceles : TriangleType() {
-    override val typeName = "isosceles"
+    override val typeName = "Isosceles"
 }
 
 object Scalene : TriangleType() {
-    override val typeName = "scalene"
+    override val typeName = "Scalene"
 }
