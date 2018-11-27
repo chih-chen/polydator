@@ -9,7 +9,7 @@ class CategorizationInteractor(
         private val polygonResolver: PolygonResolver
 ) {
 
-    fun categorizePolygons(sides: List<Float>): Pair<String, String> {
+    fun categorizePolygons(sides: List<Int>): Pair<String, String> {
 
         val polygon = polygonResolver.resolveShape(sides)
 

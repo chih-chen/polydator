@@ -8,7 +8,7 @@ import self.project.polydator.triangle.Triangle
 @Service
 class TriangleResolver : PolygonResolver {
 
-    override fun resolveShape(sides: List<Float>): Triangle {
+    override fun resolveShape(sides: List<Int>): Triangle {
         return when (sides.size) {
             3 -> Triangle(a = sides[0], b = sides[1], c = sides[2])
             else -> throw UnsupportedPolygonException()

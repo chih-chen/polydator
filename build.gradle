@@ -47,6 +47,8 @@ subprojects {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
         implementation("org.jetbrains.kotlin:kotlin-reflect")
 
+        testCompile group: "org.mockito", name: "mockito-core", version: "2.21.0"
+        testCompile group: "com.nhaarman", name: "mockito-kotlin", version: "1.6.0"
         testImplementation('org.springframework.boot:spring-boot-starter-test')
     }
 }
