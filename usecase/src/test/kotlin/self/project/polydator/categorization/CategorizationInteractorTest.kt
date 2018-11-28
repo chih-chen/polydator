@@ -8,7 +8,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import self.project.polydator.categorization.exceptions.IllegalPolygonException
-import self.project.polydator.categorization.gateways.PolygonResolver
+import self.project.polydator.categorization.gateway.PolygonResolver
 import self.project.polydator.triangle.Triangle
 
 class CategorizationInteractorTest {

@@ -2,7 +2,7 @@ package self.project.polydator.categorization
 
 import org.springframework.stereotype.Component
 import self.project.polydator.categorization.exceptions.IllegalPolygonException
-import self.project.polydator.categorization.gateways.PolygonResolver
+import self.project.polydator.categorization.gateway.PolygonResolver
 
 @Component
 class CategorizationInteractor(

@@ -1,7 +1,7 @@
 package self.project.polydator.resolver
 
 import org.springframework.stereotype.Service
-import self.project.polydator.categorization.gateways.PolygonResolver
+import self.project.polydator.categorization.gateway.PolygonResolver
 import self.project.polydator.exception.UnsupportedPolygonException
 import self.project.polydator.triangle.Triangle
 

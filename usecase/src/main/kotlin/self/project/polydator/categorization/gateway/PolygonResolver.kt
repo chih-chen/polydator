@@ -1,4 +1,4 @@
-package self.project.polydator.categorization.gateways
+package self.project.polydator.categorization.gateway
 
 import self.project.polydator.Polygon
 
