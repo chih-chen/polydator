@@ -48,4 +48,4 @@ class CategorizationIntegrationTest : IntegrationTestCase() {
         assertEquals(500, response.statusCodeValue)
         assertEquals("Unsupported shape", response.body!!["message"])
     }
-}gs
+}
