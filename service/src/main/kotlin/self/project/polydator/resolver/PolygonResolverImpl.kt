@@ -6,7 +6,7 @@ import self.project.polydator.exception.UnsupportedPolygonException
 import self.project.polydator.triangle.Triangle
 
 @Service
-class TriangleResolver : PolygonResolver {
+class PolygonResolverImpl : PolygonResolver {
 
     override fun resolveShape(sides: List<Int>): Triangle {
         return when (sides.size) {
