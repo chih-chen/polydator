@@ -1,4 +1,3 @@
-name-template: "v$NEXT_MAJOR_VERSION.$NEXT_MINOR_VERSION.$NEXT_PATCH_VERSION"
 categories:
   - title: 'New Features'
     labels:
@@ -10,8 +9,3 @@ categories:
   - title: 'Maintenance'
     labels:
       - 'chore'
-
-template: |
-  ## Changes
-
-  $CHANGES
