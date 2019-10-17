@@ -15,9 +15,9 @@ class CategorizationInteractor(
 
         val isNotValidPolygon = !polygon.validate()
 
-        if (isNotValidPolygon)
+        return if (isNotValidPolygon)
             throw IllegalPolygonException()
-
-        return Pair(polygon::class.java.simpleName, polygon.categorize().typeName)
+        else
+            Pair(polygon::class.java.simpleName, polygon.categorize().typeName)
     }
 }
