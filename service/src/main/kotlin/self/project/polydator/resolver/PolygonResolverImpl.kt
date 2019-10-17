@@ -9,10 +9,10 @@ import self.project.polydator.triangle.Triangle
 @Service
 class PolygonResolverImpl : PolygonResolver {
 
-    override fun resolveShape(sides: List<Int>): Polygon {
-        return when (sides.size) {
-            3 -> Triangle(a = sides[0], b = sides[1], c = sides[2])
-            else -> throw UnsupportedPolygonException()
-        }
-    }
+    override fun resolveShape(sides: List<Int>): Polygon =
+            when (sides.size) {
+                3 -> Triangle(a = sides[0], b = sides[1], c = sides[2])
+                else -> throw UnsupportedPolygonException()
+            }
+
 }
